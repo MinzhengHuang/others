@@ -25,3 +25,7 @@ proguard/
 
 # Log Files
 *.log
+others/build/*
+others/.idea/*
+others/.gradle/*
+others/bin/*
