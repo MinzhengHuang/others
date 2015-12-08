@@ -18,4 +18,9 @@
         style="@style/btn_style"
         android:text="CountDownTimer" />
 
+    <Button
+        android:id="@+id/btn_CircleIndicator"
+        style="@style/btn_style"
+        android:text="CircleIndicator" />
+
 </LinearLayout>

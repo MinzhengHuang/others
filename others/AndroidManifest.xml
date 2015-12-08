@@ -27,6 +27,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".countdowntimer.CountDownTimerActivity" ></activity>
+        <activity android:name=".CircleIndicatorActivity" ></activity>
     </application>
 
 </manifest>
