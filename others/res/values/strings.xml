@@ -11,5 +11,7 @@
     <string name="tab_contact">通讯录</string>
     <string name="tab_found">发现</string>
     <string name="tab_me">我</string>
+    <string name="qv_add">+</string>
+    <string name="qv_remove">-</string>
 
 </resources>

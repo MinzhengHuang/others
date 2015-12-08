@@ -9,6 +9,7 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 
 import com.others.CircleIndicatorActivity;
+import com.others.QuantityViewActivity;
 import com.others.R;
 import com.others.countdowntimer.CountDownTimerActivity;
 
@@ -20,6 +21,7 @@ public class FirstFragment extends Fragment implements OnClickListener {
         View view = inflater.inflate(R.layout.fragment_first, container, false);
         view.findViewById(R.id.btn_CountDownTimer).setOnClickListener(this);
         view.findViewById(R.id.btn_CircleIndicator).setOnClickListener(this);
+        view.findViewById(R.id.btn_QuantityView).setOnClickListener(this);
         return view;
 
     }
@@ -34,7 +36,9 @@ public class FirstFragment extends Fragment implements OnClickListener {
             case R.id.btn_CircleIndicator:
                 intent = new Intent(getActivity(), CircleIndicatorActivity.class);
                 break;
-
+            case R.id.btn_QuantityView:
+                intent = new Intent(getActivity(), QuantityViewActivity.class);
+                break;
             default:
                 break;
         }

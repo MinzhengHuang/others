@@ -23,4 +23,8 @@
         style="@style/btn_style"
         android:text="CircleIndicator" />
 
+    <Button
+        android:id="@+id/btn_QuantityView"
+        style="@style/btn_style"
+        android:text="QuantityView" />
 </LinearLayout>
