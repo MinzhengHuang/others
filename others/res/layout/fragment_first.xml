@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#66ff66"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
     <TextView
         android:layout_width="match_parent"
@@ -27,4 +27,9 @@
         android:id="@+id/btn_QuantityView"
         style="@style/btn_style"
         android:text="QuantityView" />
+
+    <Button
+        android:id="@+id/btn_CircleProgress"
+        style="@style/btn_style"
+        android:text="CircleProgress" />
 </LinearLayout>
