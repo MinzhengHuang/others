@@ -1,4 +1,4 @@
-package com.others;
+package com.others.activity;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -14,6 +14,7 @@ import android.view.View.OnClickListener;
 import android.view.ViewConfiguration;
 import android.view.Window;
 
+import com.others.R;
 import com.others.fragment.FirstFragment;
 import com.others.fragment.ForthFragment;
 import com.others.fragment.SecondFragment;

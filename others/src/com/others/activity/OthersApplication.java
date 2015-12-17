@@ -1,4 +1,4 @@
-package com.others;
+package com.others.activity;
 
 import android.app.Application;
 

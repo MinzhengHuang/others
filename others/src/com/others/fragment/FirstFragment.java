@@ -8,9 +8,9 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 
-import com.others.CircleIndicatorActivity;
-import com.others.QuantityViewActivity;
 import com.others.R;
+import com.others.activity.CircleIndicatorActivity;
+import com.others.activity.QuantityViewActivity;
 import com.others.countdowntimer.CountDownTimerActivity;
 
 public class FirstFragment extends Fragment implements OnClickListener {

@@ -1,4 +1,4 @@
-package com.others;
+package com.others.activity;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -14,6 +14,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.others.R;
 import com.others.view.QuantityView;
 
 
