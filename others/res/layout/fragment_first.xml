@@ -32,4 +32,9 @@
         android:id="@+id/btn_CircleProgress"
         style="@style/btn_style"
         android:text="CircleProgress" />
+
+    <Button
+        android:id="@+id/btn_JSBridge"
+        style="@style/btn_style"
+        android:text="JSBridge" />
 </LinearLayout>
