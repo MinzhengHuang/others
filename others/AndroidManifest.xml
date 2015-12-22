@@ -31,6 +31,7 @@
         <activity android:name=".activity.QuantityViewActivity" ></activity>
         <activity android:name=".activity.CircleProgressActivity" ></activity>
         <activity android:name=".activity.JSBridgeActivity" ></activity>
+        <activity android:name=".activity.AndroidJSActivity" ></activity>
     </application>
 
 </manifest>

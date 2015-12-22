@@ -22,11 +22,8 @@ public class JSBridgeActivity extends Activity implements OnClickListener {
 
 	private static final String TAG = "main";
 	BridgeWebView webView;
-
 	Button button;
-
 	int RESULT_CODE = 0;
-
 	ValueCallback<Uri> mUploadMessage;
 
     static class Location {
@@ -44,12 +41,9 @@ public class JSBridgeActivity extends Activity implements OnClickListener {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_jsbridge);
 
-        webView = (BridgeWebView) findViewById(R.id.webView);
-
 		button = (Button) findViewById(R.id.button);
-
 		button.setOnClickListener(this);
-
+		webView = (BridgeWebView) findViewById(R.id.webView);
 		webView.setDefaultHandler(new DefaultHandler());
 
 		webView.setWebChromeClient(new WebChromeClient() {
@@ -124,7 +118,6 @@ public class JSBridgeActivity extends Activity implements OnClickListener {
 
 				@Override
 				public void onCallBack(String data) {
-					// TODO Auto-generated method stub
 					Log.i(TAG, "reponse data from js " + data);
 				}
 
