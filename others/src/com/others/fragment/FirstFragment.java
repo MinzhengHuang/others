@@ -12,6 +12,7 @@ import com.others.R;
 import com.others.activity.AndroidJSActivity;
 import com.others.activity.CircleIndicatorActivity;
 import com.others.activity.CircleProgressActivity;
+import com.others.activity.IndexableListViewActivity;
 import com.others.activity.JSBridgeActivity;
 import com.others.activity.QuantityViewActivity;
 import com.others.countdowntimer.CountDownTimerActivity;
@@ -28,6 +29,7 @@ public class FirstFragment extends Fragment implements OnClickListener {
         view.findViewById(R.id.btn_CircleProgress).setOnClickListener(this);
         view.findViewById(R.id.btn_JSBridge).setOnClickListener(this);
         view.findViewById(R.id.btn_AndroidJS).setOnClickListener(this);
+        view.findViewById(R.id.btn_IndexableListView).setOnClickListener(this);
         return view;
 
     }
@@ -53,6 +55,9 @@ public class FirstFragment extends Fragment implements OnClickListener {
                 break;
             case R.id.btn_AndroidJS:
                 intent = new Intent(getActivity(), AndroidJSActivity.class);
+                break;
+            case R.id.btn_IndexableListView:
+                intent = new Intent(getActivity(), IndexableListViewActivity.class);
                 break;
             default:
                 break;

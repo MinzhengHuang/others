@@ -41,4 +41,8 @@
         android:id="@+id/btn_AndroidJS"
         style="@style/btn_style"
         android:text="Android和JS交互" />
+    <Button
+        android:id="@+id/btn_IndexableListView"
+        style="@style/btn_style"
+        android:text="IndexableListView" />
 </LinearLayout>

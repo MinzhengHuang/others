@@ -48,6 +48,7 @@ public class AndroidJSActivity extends Activity {
             //创建一个Builder来显示网页中的对话框
             new Builder(AndroidJSActivity.this).setTitle("Alert对话框").setMessage(message)
                     .setPositiveButton("确定", new OnClickListener() {
+
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             result.confirm();
@@ -89,6 +90,7 @@ public class AndroidJSActivity extends Activity {
             //定义对话框上的确定按钮
             new Builder(AndroidJSActivity.this).setTitle("Prompt对话框").setView(myview)
                     .setPositiveButton("确定", new OnClickListener() {
+
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             //单机确定后取得输入的值,传给网页处理
@@ -97,6 +99,7 @@ public class AndroidJSActivity extends Activity {
                         }
                     })
                     .setNegativeButton("取消", new OnClickListener() {
+
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             result.cancel();

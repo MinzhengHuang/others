@@ -32,6 +32,7 @@
         <activity android:name=".activity.CircleProgressActivity" ></activity>
         <activity android:name=".activity.JSBridgeActivity" ></activity>
         <activity android:name=".activity.AndroidJSActivity" ></activity>
+        <activity android:name=".activity.IndexableListViewActivity" ></activity>
     </application>
 
 </manifest>
