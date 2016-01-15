@@ -18,6 +18,7 @@ import com.others.R;
 /**
  * Created by bruce on 11/4/14.
  */
+
 public class CircleProgress extends View {
     private Paint textPaint;
     private RectF rectF = new RectF();
@@ -93,7 +94,6 @@ public class CircleProgress extends View {
         textPaint.setColor(textColor);
         textPaint.setTextSize(textSize);
         textPaint.setAntiAlias(true);
-
         paint.setAntiAlias(true);
     }
 
@@ -248,7 +248,7 @@ public class CircleProgress extends View {
 
     @Override
     protected void onRestoreInstanceState(Parcelable state) {
-        if(state instanceof Bundle) {
+        if (state instanceof Bundle) {
             final Bundle bundle = (Bundle) state;
             textColor = bundle.getInt(INSTANCE_TEXT_COLOR);
             textSize = bundle.getFloat(INSTANCE_TEXT_SIZE);

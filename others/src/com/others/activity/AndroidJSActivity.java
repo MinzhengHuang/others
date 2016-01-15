@@ -81,7 +81,7 @@ public class AndroidJSActivity extends Activity {
         @Override
         public boolean onJsPrompt(WebView view, String url, String message,
                                   String defaultValue, final JsPromptResult result) {
-            //①获得一个LayoutInflater对象factory,加载指定布局成相应对象
+            //获得一个LayoutInflater对象factory,加载指定布局成相应对象
             final LayoutInflater inflater = LayoutInflater.from(AndroidJSActivity.this);
             final View myview = inflater.inflate(R.layout.prompt_view, null);
             //设置TextView对应网页中的提示信息,edit设置来自于网页的默认文字

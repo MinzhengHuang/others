@@ -16,7 +16,6 @@ import android.widget.ListView;
  * 自定义索引列表
  *
  * @author by 佚名
- *
  */
 public class IndexableListView extends ListView {
 
@@ -45,7 +44,7 @@ public class IndexableListView extends ListView {
     public void setFastScrollEnabled(boolean enabled) {
         mIsFastScrollEnabled = enabled;
         if (mIsFastScrollEnabled) {
-            if (mScroller == null){
+            if (mScroller == null) {
                 mScroller = new IndexScroller(getContext(), this);
             }
 
@@ -62,7 +61,7 @@ public class IndexableListView extends ListView {
         super.draw(canvas);
 
         // 绘制右侧的索引条
-        if (mScroller != null){
+        if (mScroller != null) {
             mScroller.draw(canvas);
         }
 
@@ -71,7 +70,7 @@ public class IndexableListView extends ListView {
     @Override
     public boolean onTouchEvent(MotionEvent ev) {
         // Intercept ListView's touch event
-        if (mScroller != null && mScroller.onTouchEvent(ev)){
+        if (mScroller != null && mScroller.onTouchEvent(ev)) {
             return true;
         }
 
@@ -104,7 +103,7 @@ public class IndexableListView extends ListView {
     @Override
     public void setAdapter(ListAdapter adapter) {
         super.setAdapter(adapter);
-        if (mScroller != null){
+        if (mScroller != null) {
             mScroller.setAdapter(adapter);
         }
 
@@ -113,10 +112,9 @@ public class IndexableListView extends ListView {
     @Override
     protected void onSizeChanged(int w, int h, int oldw, int oldh) {
         super.onSizeChanged(w, h, oldw, oldh);
-        if (mScroller != null){
+        if (mScroller != null) {
             mScroller.onSizeChanged(w, h, oldw, oldh);
         }
-
     }
 
 }

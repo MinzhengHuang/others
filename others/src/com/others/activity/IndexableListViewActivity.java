@@ -90,7 +90,6 @@ public class IndexableListViewActivity extends Activity {
                                     String.valueOf(k))){
                                 return j;
                             }
-
                         }
                     } else { // A~Z
                         if (StringMatcher.match(
