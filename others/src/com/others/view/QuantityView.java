@@ -25,14 +25,10 @@ import com.others.R;
 public class QuantityView extends LinearLayout implements View.OnClickListener {
 
     private Drawable quantityBackground, addButtonBackground, removeButtonBackground;
-
     private String addButtonText, removeButtonText;
-
     private int quantity, maxQuantity, minQuantity;
     private int quantityPadding;
-
     private int quantityTextColor, addButtonTextColor, removeButtonTextColor;
-
     private Button mButtonAdd, mButtonRemove;
     private TextView mTextViewQuantity;
 

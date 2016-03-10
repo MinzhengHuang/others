@@ -12,5 +12,4 @@ public class OthersApplication extends Application {
         super.onCreate();
     }
 
-
 }

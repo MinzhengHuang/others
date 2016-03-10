@@ -45,4 +45,8 @@
         android:id="@+id/btn_IndexableListView"
         style="@style/btn_style"
         android:text="IndexableListView" />
+    <Button
+        android:id="@+id/btn_AndroidCheckBox"
+        style="@style/btn_style"
+        android:text="AndroidCheckBox" />
 </LinearLayout>

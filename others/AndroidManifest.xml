@@ -33,6 +33,7 @@
         <activity android:name=".activity.JSBridgeActivity" ></activity>
         <activity android:name=".activity.AndroidJSActivity" ></activity>
         <activity android:name=".activity.IndexableListViewActivity" ></activity>
+        <activity android:name=".activity.AndroidCheckBoxActivity" ></activity>
     </application>
 
 </manifest>
