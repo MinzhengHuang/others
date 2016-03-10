@@ -13,6 +13,7 @@ import com.others.activity.AndroidCheckBoxActivity;
 import com.others.activity.AndroidJSActivity;
 import com.others.activity.CircleIndicatorActivity;
 import com.others.activity.CircleProgressActivity;
+import com.others.activity.DateWheelActivity;
 import com.others.activity.IndexableListViewActivity;
 import com.others.activity.JSBridgeActivity;
 import com.others.activity.QuantityViewActivity;
@@ -32,6 +33,7 @@ public class FirstFragment extends Fragment implements OnClickListener {
         view.findViewById(R.id.btn_AndroidJS).setOnClickListener(this);
         view.findViewById(R.id.btn_IndexableListView).setOnClickListener(this);
         view.findViewById(R.id.btn_AndroidCheckBox).setOnClickListener(this);
+        view.findViewById(R.id.btn_DateWheelActivity).setOnClickListener(this);
         return view;
 
     }
@@ -63,6 +65,9 @@ public class FirstFragment extends Fragment implements OnClickListener {
                 break;
             case R.id.btn_AndroidCheckBox:
                 intent = new Intent(getActivity(), AndroidCheckBoxActivity.class);
+                break;
+            case R.id.btn_DateWheelActivity:
+                intent = new Intent(getActivity(), DateWheelActivity.class);
                 break;
             default:
                 break;

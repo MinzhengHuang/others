@@ -49,4 +49,8 @@
         android:id="@+id/btn_AndroidCheckBox"
         style="@style/btn_style"
         android:text="AndroidCheckBox" />
+    <Button
+        android:id="@+id/btn_DateWheelActivity"
+        style="@style/btn_style"
+        android:text="DateWheelActivity" />
 </LinearLayout>

@@ -34,6 +34,7 @@
         <activity android:name=".activity.AndroidJSActivity" ></activity>
         <activity android:name=".activity.IndexableListViewActivity" ></activity>
         <activity android:name=".activity.AndroidCheckBoxActivity" ></activity>
+        <activity android:name=".activity.DateWheelActivity" ></activity>
     </application>
 
 </manifest>
