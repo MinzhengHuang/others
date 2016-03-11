@@ -31,8 +31,6 @@ public class MainActivity extends FragmentActivity implements OnClickListener,
 
 	private ViewPager mViewPager;
 	private List<Fragment> mTabs = new ArrayList<Fragment>();
-//	private String[] mTitles = new String[] { "First Fragment !",
-//			"Second Fragment !", "Third Fragment !", "Fourth Fragment !" };
 	private FragmentPagerAdapter mAdapter;
 
 	private List<ChangeColorIconWithText> mTabIndicators = new ArrayList<ChangeColorIconWithText>();
@@ -63,14 +61,6 @@ public class MainActivity extends FragmentActivity implements OnClickListener,
 	}
 
 	private void initDatas() {
-//		for (String title : mTitles) {
-//			TabFragment tabFragment = new TabFragment();
-//			Bundle bundle = new Bundle();
-//			bundle.putString(TabFragment.TITLE, title);
-//			tabFragment.setArguments(bundle);
-//			mTabs.add(tabFragment);
-//		}
-		
 		FirstFragment firstFragment=new FirstFragment();
 		SecondFragment secondFragment=new SecondFragment();
 		ThirdFragment thirdFragment=new ThirdFragment();
@@ -227,8 +217,6 @@ public class MainActivity extends FragmentActivity implements OnClickListener,
 	@Override
 	public boolean onKeyDown( int keyCode, KeyEvent event) {
 		// TODO Auto-generated method stub
-		Log.i("main","onKeyDown");
-		Log.i("main","keyCode="+keyCode);
 		if (keyCode == event. KEYCODE_HOME) {
 			Log.i("main","home");
 			return true;

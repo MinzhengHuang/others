@@ -70,19 +70,25 @@
                 android:id="@+id/year_view"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"></com.others.datewheel.WheelView>
+                android:layout_weight="1">
+
+            </com.others.datewheel.WheelView>
 
             <com.others.datewheel.WheelView
                 android:id="@+id/month_view"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"></com.others.datewheel.WheelView>
+                android:layout_weight="1">
+
+            </com.others.datewheel.WheelView>
 
             <com.others.datewheel.WheelView
                 android:id="@+id/day_view"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"></com.others.datewheel.WheelView>
+                android:layout_weight="1">
+
+            </com.others.datewheel.WheelView>
         </LinearLayout>
     </LinearLayout>
 

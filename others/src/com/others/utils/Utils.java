@@ -1,4 +1,4 @@
-package com.others.circleprogress;
+package com.others.utils;
 
 import android.content.res.Resources;
 

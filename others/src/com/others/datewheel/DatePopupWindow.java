@@ -19,24 +19,18 @@ import com.others.R;
 import java.util.Calendar;
 
 /**
- * 性别
  *
  * @author he xiaohui
- *         <p/>
- *         2015-2-8 下午4:06:12
+ * 2015-2-8 下午4:06:12
  */
 @SuppressLint("ViewConstructor")
 public class DatePopupWindow extends PopupWindow {
 
     private View mMenuView;
-
-    private WheelView year_view, month_view, day_view;
-
+    private WheelView yearView, monthView, dayView;
     private NumericWheelAdapter yearAdapter, monthAdapter, dayAdapter;
-
-    OnDateSelectListener selectListener;
-
-    String title;
+    private OnDateSelectListener selectListener;
+    private String title;
 
     public DatePopupWindow(Activity context, String title,
                            OnDateSelectListener selectListener) {
@@ -46,12 +40,12 @@ public class DatePopupWindow extends PopupWindow {
         LayoutInflater inflater = (LayoutInflater) context
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         mMenuView = inflater.inflate(R.layout.dateselect_dialog, null);
-        year_view = (WheelView) mMenuView.findViewById(R.id.year_view);
-        month_view = (WheelView) mMenuView.findViewById(R.id.month_view);
-        day_view = (WheelView) mMenuView.findViewById(R.id.day_view);
-        TextView title_textview = (TextView) mMenuView
+        yearView = (WheelView) mMenuView.findViewById(R.id.year_view);
+        monthView = (WheelView) mMenuView.findViewById(R.id.month_view);
+        dayView = (WheelView) mMenuView.findViewById(R.id.day_view);
+        TextView tvTitle = (TextView) mMenuView
                 .findViewById(R.id.title_textview);
-        title_textview.setText(title);
+        tvTitle.setText(title);
 
         initListener();
         initView();
@@ -98,56 +92,56 @@ public class DatePopupWindow extends PopupWindow {
         day = c.get(Calendar.DAY_OF_MONTH);
 
         yearAdapter = new NumericWheelAdapter(curYears - 50, curYears + 10);
-        year_view.setAdapter(yearAdapter);
-        year_view.setLabel("year");
+        yearView.setAdapter(yearAdapter);
+        yearView.setLabel("year");
 
         monthAdapter = new NumericWheelAdapter(1, 12);
-        month_view.setAdapter(monthAdapter);
-        month_view.setLabel("month");
-        month_view.setCyclic(true);
+        monthView.setAdapter(monthAdapter);
+        monthView.setLabel("month");
+        monthView.setCyclic(true);
 
         dayAdapter = new NumericWheelAdapter(1,
                 c.getActualMaximum(Calendar.DAY_OF_MONTH));
-        day_view.setAdapter(dayAdapter);
-        day_view.setLabel("day");
-        day_view.setCyclic(true);
+        dayView.setAdapter(dayAdapter);
+        dayView.setLabel("day");
+        dayView.setCyclic(true);
 
-        year_view.setCurrentYearItem(curYears);
-        month_view.setCurrentItem(curMonth);
-        day_view.setCurrentItem(day - 1);
+        yearView.setCurrentYearItem(curYears);
+        monthView.setCurrentItem(curMonth);
+        dayView.setCurrentItem(day - 1);
     }
 
     protected void initListener() {
-        year_view.addChangingListener(new OnWheelChangedListener() {
+        yearView.addChangingListener(new OnWheelChangedListener() {
 
             @Override
             public void onChanged(WheelView wheel, int oldValue, int newValue) {
-                refreshDay(newValue, month_view.getCurrentItem());
+                refreshDay(newValue, monthView.getCurrentItem());
             }
         });
-        month_view.addChangingListener(new OnWheelChangedListener() {
+        monthView.addChangingListener(new OnWheelChangedListener() {
 
             @Override
             public void onChanged(WheelView wheel, int oldValue, int newValue) {
-                refreshDay(year_view.getCurrentItem(), newValue);
+                refreshDay(yearView.getCurrentItem(), newValue);
             }
         });
-        View close_button = mMenuView.findViewById(R.id.close_button);
-        close_button.setOnClickListener(new View.OnClickListener() {
+        View btnClose = mMenuView.findViewById(R.id.close_button);
+        btnClose.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
                 dismiss();
             }
         });
-        View ok_button = mMenuView.findViewById(R.id.ok_button);
-        ok_button.setOnClickListener(new View.OnClickListener() {
+        View btnOK = mMenuView.findViewById(R.id.ok_button);
+        btnOK.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                String value = changeTime(year_view.getCurrentYearValue())
-                        + "-" + changeTime(month_view.getCurrentValue()) + "-"
-                        + changeTime(day_view.getCurrentValue());
+                String value = changeTime(yearView.getCurrentYearValue())
+                        + "-" + changeTime(monthView.getCurrentValue()) + "-"
+                        + changeTime(dayView.getCurrentValue());
                 if (null != selectListener) {
                     selectListener.onDateSelect(value);
                 }
@@ -165,7 +159,7 @@ public class DatePopupWindow extends PopupWindow {
         c.set(Calendar.YEAR, year);
         c.set(Calendar.MONTH, month);
         dayAdapter.setMaxValue(c.getActualMaximum(Calendar.DAY_OF_MONTH));
-        day_view.setAdapter(dayAdapter);
+        dayView.setAdapter(dayAdapter);
     }
 
     public void showWindow(View view) {
@@ -173,6 +167,6 @@ public class DatePopupWindow extends PopupWindow {
     }
 
     public interface OnDateSelectListener {
-        public void onDateSelect(String value);
+        void onDateSelect(String value);
     }
 }

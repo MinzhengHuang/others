@@ -14,6 +14,7 @@ import android.util.AttributeSet;
 import android.view.View;
 
 import com.others.R;
+import com.others.utils.Utils;
 
 /**
  * Created by bruce on 14-10-30.
