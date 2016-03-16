@@ -9,6 +9,7 @@
         android:targetSdkVersion="19" />
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_SMS" />
 
     <application
         android:allowBackup="true"
@@ -35,6 +36,7 @@
         <activity android:name=".activity.IndexableListViewActivity" ></activity>
         <activity android:name=".activity.AndroidCheckBoxActivity" ></activity>
         <activity android:name=".activity.DateWheelActivity" ></activity>
+        <activity android:name=".activity.SmsValidateCodeActivity" ></activity>
     </application>
 
 </manifest>
