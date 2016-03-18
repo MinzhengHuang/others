@@ -21,7 +21,6 @@ import java.util.Calendar;
 /**
  *
  * @author he xiaohui
- * 2015-2-8 ÏÂÎç4:06:12
  */
 @SuppressLint("ViewConstructor")
 public class DatePopupWindow extends PopupWindow {
@@ -50,22 +49,22 @@ public class DatePopupWindow extends PopupWindow {
         initListener();
         initView();
 
-        // ÉèÖÃ°´Å¥¼àÌý
-        // ÉèÖÃSelectPicPopupWindowµÄView
+        // ï¿½ï¿½ï¿½Ã°ï¿½Å¥ï¿½ï¿½ï¿½ï¿½
+        // ï¿½ï¿½ï¿½ï¿½SelectPicPopupWindowï¿½ï¿½View
         this.setContentView(mMenuView);
-        // ÉèÖÃSelectPicPopupWindowµ¯³ö´°ÌåµÄ¿í
+        // ï¿½ï¿½ï¿½ï¿½SelectPicPopupWindowï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½
         this.setWidth(LayoutParams.MATCH_PARENT);
-        // ÉèÖÃSelectPicPopupWindowµ¯³ö´°ÌåµÄ¸ß
+        // ï¿½ï¿½ï¿½ï¿½SelectPicPopupWindowï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¸ï¿½
         this.setHeight(LayoutParams.WRAP_CONTENT);
-        // ÉèÖÃSelectPicPopupWindowµ¯³ö´°Ìå¿Éµã»÷
+        // ï¿½ï¿½ï¿½ï¿½SelectPicPopupWindowï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Éµï¿½ï¿½
         this.setFocusable(true);
-        // ÉèÖÃSelectPicPopupWindowµ¯³ö´°Ìå¶¯»­Ð§¹û
+        // ï¿½ï¿½ï¿½ï¿½SelectPicPopupWindowï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½å¶¯ï¿½ï¿½Ð§ï¿½ï¿½
         this.setAnimationStyle(R.style.AnimBottom);
-        // ÊµÀý»¯Ò»¸öColorDrawableÑÕÉ«Îª°ëÍ¸Ã÷
+        // Êµï¿½ï¿½Ò»ï¿½ï¿½ColorDrawableï¿½ï¿½É«Îªï¿½ï¿½Í¸ï¿½ï¿½
         ColorDrawable dw = new ColorDrawable(Color.TRANSPARENT);
-        // ÉèÖÃSelectPicPopupWindowµ¯³ö´°ÌåµÄ±³¾°
+        // ï¿½ï¿½ï¿½ï¿½SelectPicPopupWindowï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä±ï¿½ï¿½ï¿½
         this.setBackgroundDrawable(dw);
-        // mMenuViewÌí¼ÓOnTouchListener¼àÌýÅÐ¶Ï»ñÈ¡´¥ÆÁÎ»ÖÃÈç¹ûÔÚÑ¡Ôñ¿òÍâÃæÔòÏú»Ùµ¯³ö¿ò
+        // mMenuViewï¿½ï¿½ï¿½OnTouchListenerï¿½ï¿½ï¿½ï¿½ï¿½Ð¶Ï»ï¿½È¡ï¿½ï¿½ï¿½ï¿½Î»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ùµï¿½ï¿½ï¿½ï¿½ï¿½
         mMenuView.setOnTouchListener(new OnTouchListener() {
 
             public boolean onTouch(View v, MotionEvent event) {

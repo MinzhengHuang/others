@@ -624,7 +624,7 @@ public class WheelView extends View {
         int width = widthSize;
         int maxLength = getMaxTextLength();
         if (maxLength > 0) {
-            float textWidth = FloatMath.ceil(Layout.getDesiredWidth("0",
+            float textWidth = (float) Math.ceil(Layout.getDesiredWidth("0",
                     itemsPaint));
             itemsWidth = (int) (maxLength * textWidth);
         } else {
@@ -634,7 +634,7 @@ public class WheelView extends View {
 
         labelWidth = 0;
         if (label != null && label.length() > 0) {
-            labelWidth = (int) FloatMath.ceil(Layout.getDesiredWidth(label,
+            labelWidth = (int) Math.ceil(Layout.getDesiredWidth(label,
                     valuePaint));
         }
 

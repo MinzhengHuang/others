@@ -16,6 +16,7 @@ import com.others.activity.CircleProgressActivity;
 import com.others.activity.DateWheelActivity;
 import com.others.activity.IndexableListViewActivity;
 import com.others.activity.JSBridgeActivity;
+import com.others.activity.PickerViewActivity;
 import com.others.activity.QuantityViewActivity;
 import com.others.activity.SmsValidateCodeActivity;
 import com.others.countdowntimer.CountDownTimerActivity;
@@ -36,6 +37,7 @@ public class FirstFragment extends Fragment implements OnClickListener {
         view.findViewById(R.id.btn_AndroidCheckBox).setOnClickListener(this);
         view.findViewById(R.id.btn_DateWheelActivity).setOnClickListener(this);
         view.findViewById(R.id.btn_SmsValidateCode).setOnClickListener(this);
+        view.findViewById(R.id.btn_PickerView).setOnClickListener(this);
         return view;
 
     }
@@ -73,6 +75,9 @@ public class FirstFragment extends Fragment implements OnClickListener {
                 break;
             case R.id.btn_SmsValidateCode:
                 intent = new Intent(getActivity(), SmsValidateCodeActivity.class);
+                break;
+            case R.id.btn_PickerView:
+                intent = new Intent(getActivity(), PickerViewActivity.class);
                 break;
             default:
                 break;

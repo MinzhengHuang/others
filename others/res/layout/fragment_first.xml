@@ -57,4 +57,9 @@
         android:id="@+id/btn_SmsValidateCode"
         style="@style/btn_style"
         android:text="SmsValidateCode" />
+    <Button
+        android:id="@+id/btn_PickerView"
+        style="@style/btn_style"
+        android:text="PickerView" />
+
 </LinearLayout>
