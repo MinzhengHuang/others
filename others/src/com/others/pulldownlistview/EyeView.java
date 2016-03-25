@@ -23,7 +23,6 @@ public class EyeView extends ImageView {
 	Handler mHandler = new Handler();
 	public EyeView(Context context, AttributeSet attrs) {
 		super(context, attrs);
-		// TODO Auto-generated constructor stub
 		mPaint = new Paint();
 		mPaint.setAntiAlias(true);
 		rotateProgress = 0;
@@ -133,7 +132,6 @@ public class EyeView extends ImageView {
 
 		@Override
 		public void run() {
-			// TODO Auto-generated method stub
 			rotateProgress += 10;
 			if(rotateProgress>360){
 				rotateProgress = 0;

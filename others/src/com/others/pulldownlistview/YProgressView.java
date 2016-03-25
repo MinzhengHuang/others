@@ -20,7 +20,6 @@ public class YProgressView extends ImageView{
 	boolean isAnimate;
 	public YProgressView(Context context, AttributeSet attrs) {
 		super(context, attrs);
-		// TODO Auto-generated constructor stub
 		this.setWillNotDraw(false);
 		mPaint = new Paint();
 		mPaint.setAntiAlias(true);
@@ -82,7 +81,6 @@ public class YProgressView extends ImageView{
 
 		@Override
 		public void run() {
-			// TODO Auto-generated method stub
 			progress2 += 0.01;
 			if(isAnimate){
 				mHandler.postDelayed(this, 10);

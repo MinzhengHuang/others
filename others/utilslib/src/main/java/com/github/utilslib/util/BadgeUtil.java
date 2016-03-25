@@ -78,7 +78,6 @@ public class BadgeUtil {
     <uses-permission android:name="android.hardware.sensor.accelerometer"/>*/
     public static void setBadgeCount(Context context, int count,int icon) {
 
-        // TODO 生成器模式重构
         if (count <= 0) {
             count = 0;
         } else {

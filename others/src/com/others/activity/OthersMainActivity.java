@@ -26,7 +26,7 @@ import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends FragmentActivity implements OnClickListener,
+public class OthersMainActivity extends FragmentActivity implements OnClickListener,
 		OnPageChangeListener {
 
 	private ViewPager mViewPager;
@@ -39,7 +39,7 @@ public class MainActivity extends FragmentActivity implements OnClickListener,
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
+		setContentView(R.layout.activity_main_others);
 		setOverflowButtonAlways();
 //		getActionBar().setDisplayShowHomeEnabled(false);
 
@@ -204,19 +204,16 @@ public class MainActivity extends FragmentActivity implements OnClickListener,
 
 	@Override
 	public void onPageSelected(int position) {
-		// TODO Auto-generated method stub
 
 	}
 
 	@Override
 	public void onPageScrollStateChanged(int state) {
-		// TODO Auto-generated method stub
 
 	}
 
 	@Override
 	public boolean onKeyDown( int keyCode, KeyEvent event) {
-		// TODO Auto-generated method stub
 		if (keyCode == event. KEYCODE_HOME) {
 			Log.i("main","home");
 			return true;
