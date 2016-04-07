@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/app/src/main/java/city/com/city/City.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/city/com/city/DBHelper.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/city/com/city/DatabaseHelper.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/city/com/city/MyGridView.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/city/com/city/MyLetterListView.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/city/com/city/PingYinUtil.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/cityhot_edittext_bg.9.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/icon.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/title_bar_background.9.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/wb_btn_off_normal.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/wb_city_search_bg.9.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/wb_search_icon.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/item_selector.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/text_selector.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/frist_list_item.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/item_city.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/list_item.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/main.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/overlay.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/recent_city.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/total_item.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/cityhot_edittext_bg.9.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/icon.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/item_selector.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/text_selector.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/title_bar_background.9.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/wb_btn_off_normal.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/wb_city_search_bg.9.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/wb_search_icon.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/assets/meituan_cities.db" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/libs/baidumapapi_v2_1_2.jar" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/libs/locSDK_3.1.jar" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/libs/pinyin4android1.0.jar" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/libs/pinyin4j-2.5.0.jar" charset="GBK" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>
