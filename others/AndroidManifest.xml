@@ -39,6 +39,8 @@
         <activity android:name=".activity.SmsValidateCodeActivity"></activity>
         <activity android:name=".activity.PickerViewActivity"></activity>
         <activity android:name=".pulldownlistview.PulldownListviewActivity" ></activity>
+        <activity android:name=".activity.LoadingBarActivity" ></activity>
+        <activity android:name=".activity.WeixinGroupIconActivity" ></activity>
     </application>
 
 </manifest>
