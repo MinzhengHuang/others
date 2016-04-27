@@ -27,4 +27,10 @@
         android:id="@+id/btn_WeixinGroupIcon"
         style="@style/btn_style"
         android:text="WeixinGroupIcon" />
+
+    <Button
+        android:id="@+id/btn_ExplosionField"
+        style="@style/btn_style"
+        android:text="ExplosionField" />
+
 </LinearLayout>

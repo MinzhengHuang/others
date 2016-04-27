@@ -9,6 +9,7 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 
 import com.others.R;
+import com.others.activity.ExplosionFieldActivity;
 import com.others.activity.LoadingBarActivity;
 import com.others.activity.WeixinGroupIconActivity;
 import com.others.pulldownlistview.PulldownListviewActivity;
@@ -22,6 +23,7 @@ public class SecondFragment extends Fragment implements OnClickListener {
         view.findViewById(R.id.btn_PullDownListView).setOnClickListener(this);
         view.findViewById(R.id.btn_LoadingBar).setOnClickListener(this);
         view.findViewById(R.id.btn_WeixinGroupIcon).setOnClickListener(this);
+        view.findViewById(R.id.btn_ExplosionField).setOnClickListener(this);
         return view;
 
     }
@@ -38,6 +40,9 @@ public class SecondFragment extends Fragment implements OnClickListener {
                 break;
             case R.id.btn_WeixinGroupIcon:
                 intent = new Intent(getActivity(), WeixinGroupIconActivity.class);
+                break;
+            case R.id.btn_ExplosionField:
+                intent = new Intent(getActivity(), ExplosionFieldActivity.class);
                 break;
             default:
                 break;

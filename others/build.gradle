@@ -12,6 +12,7 @@ dependencies {
     compile fileTree(dir: 'libs', include: '*.jar')
     compile project(':pickerview')
     compile project(':utilslib')
+    compile project(':explosionfield_lib')
 }
 
 android {
