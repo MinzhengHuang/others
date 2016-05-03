@@ -20,13 +20,17 @@ import com.others.activity.PickerViewActivity;
 import com.others.activity.QuantityViewActivity;
 import com.others.activity.SmsValidateCodeActivity;
 import com.others.countdowntimer.CountDownTimerActivity;
+import com.others.view.DragIndicatorView;
 
 public class FirstFragment extends Fragment implements OnClickListener {
+
+    private DragIndicatorView mOtherView;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_first, container, false);
+        mOtherView = (DragIndicatorView) view.findViewById(R.id.indicator);
         view.findViewById(R.id.btn_CountDownTimer).setOnClickListener(this);
         view.findViewById(R.id.btn_CircleIndicator).setOnClickListener(this);
         view.findViewById(R.id.btn_QuantityView).setOnClickListener(this);
@@ -38,6 +42,12 @@ public class FirstFragment extends Fragment implements OnClickListener {
         view.findViewById(R.id.btn_DateWheelActivity).setOnClickListener(this);
         view.findViewById(R.id.btn_SmsValidateCode).setOnClickListener(this);
         view.findViewById(R.id.btn_PickerView).setOnClickListener(this);
+        mOtherView.setOnDismissAction(new DragIndicatorView.OnIndicatorDismiss() {
+            @Override
+            public void OnDismiss(DragIndicatorView view) {
+                mOtherView.setVisibility(View.GONE);
+            }
+        });
         return view;
 
     }
@@ -48,6 +58,7 @@ public class FirstFragment extends Fragment implements OnClickListener {
         switch (v.getId()) {
             case R.id.btn_CountDownTimer:
                 intent = new Intent(getActivity(), CountDownTimerActivity.class);
+                mOtherView.dismissView();
                 break;
             case R.id.btn_CircleIndicator:
                 intent = new Intent(getActivity(), CircleIndicatorActivity.class);

@@ -114,4 +114,39 @@
         <attr name="arcProgressStyle" format="reference"/>
     </declare-styleable>
 
+    <declare-styleable name="UnderLineLinearLayout">
+        <!--时间轴偏移值-->
+        <attr name="line_margin_side" format="dimension"/>
+        <!--时间轴动态调整值-->
+        <attr name="line_dynamic_dimen" format="dimension"/>
+        <!--线宽-->
+        <attr name="line_stroke_width" format="dimension"/>
+        <!--线的颜色-->
+        <attr name="line_color" format="color"/>
+        <!--点的大小-->
+        <attr name="point_size" format="dimension"/>
+        <!--点的颜色-->
+        <attr name="point_color" format="color"/>
+        <!--图标-->
+        <attr name="icon_src" format="reference"/>
+        <!--时间轴的gravity-->
+        <!--the gravity of the timeline-->
+        <attr name="line_gravity">
+            <enum name="Left" value="2"/>
+            <enum name="Right" value="4"/>
+            <enum name="Middle" value="0"/>
+            <enum name="Top" value="1"/>
+            <enum name="Bottom" value="3"/>
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="password_edit_text">
+
+        <attr name="show_drawable" format="integer"/>
+        <attr name="hide_drawable" format="integer"/>
+        <attr name="password_visible" format="boolean"/>
+        <attr name="show_as_text" format="boolean"/>
+        <attr name="hide_text" format="string"/>
+        <attr name="show_text" format="string"/>
+    </declare-styleable>
 </resources>

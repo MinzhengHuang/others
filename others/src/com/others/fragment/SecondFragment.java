@@ -11,6 +11,8 @@ import android.view.ViewGroup;
 import com.others.R;
 import com.others.activity.ExplosionFieldActivity;
 import com.others.activity.LoadingBarActivity;
+import com.others.activity.PasswordEditTextActivity;
+import com.others.activity.UnderLineActivity;
 import com.others.activity.WeixinGroupIconActivity;
 import com.others.pulldownlistview.PulldownListviewActivity;
 
@@ -24,6 +26,8 @@ public class SecondFragment extends Fragment implements OnClickListener {
         view.findViewById(R.id.btn_LoadingBar).setOnClickListener(this);
         view.findViewById(R.id.btn_WeixinGroupIcon).setOnClickListener(this);
         view.findViewById(R.id.btn_ExplosionField).setOnClickListener(this);
+        view.findViewById(R.id.btn_UnderLine).setOnClickListener(this);
+        view.findViewById(R.id.btn_PasswordEditText).setOnClickListener(this);
         return view;
 
     }
@@ -43,6 +47,12 @@ public class SecondFragment extends Fragment implements OnClickListener {
                 break;
             case R.id.btn_ExplosionField:
                 intent = new Intent(getActivity(), ExplosionFieldActivity.class);
+                break;
+            case R.id.btn_UnderLine:
+                intent = new Intent(getActivity(), UnderLineActivity.class);
+                break;
+            case R.id.btn_PasswordEditText:
+                intent = new Intent(getActivity(), PasswordEditTextActivity.class);
                 break;
             default:
                 break;

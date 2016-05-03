@@ -2,16 +2,16 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="#99ffcc" >
+    android:background="#99ffcc"
+    android:orientation="vertical">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="第二页"
         android:gravity="center"
-        android:textSize="20sp"
-        android:padding="5dp"/>
+        android:padding="5dp"
+        android:text="第二页"
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/btn_PullDownListView"
@@ -33,4 +33,13 @@
         style="@style/btn_style"
         android:text="ExplosionField" />
 
+    <Button
+        android:id="@+id/btn_UnderLine"
+        style="@style/btn_style"
+        android:text="UnderLine" />
+
+    <Button
+        android:id="@+id/btn_PasswordEditText"
+        style="@style/btn_style"
+        android:text="PasswordEditText" />
 </LinearLayout>

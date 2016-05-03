@@ -13,5 +13,6 @@
     <string name="tab_me">我</string>
     <string name="qv_add">+</string>
     <string name="qv_remove">-</string>
-
+    <string name="hide_text">HIDE</string>
+    <string name="show_text">SHOW</string>
 </resources>

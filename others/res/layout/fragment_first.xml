@@ -13,10 +13,30 @@
         android:text="第一页"
         android:textSize="20sp" />
 
-    <Button
-        android:id="@+id/btn_CountDownTimer"
-        style="@style/btn_style"
-        android:text="CountDownTimer" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn_CountDownTimer"
+            style="@style/btn_style"
+            android:text="CountDownTimer" />
+
+        <com.others.view.DragIndicatorView
+            android:id="@+id/indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="20dp"
+            android:background="#ff0000"
+            android:padding="6dp"
+            android:text="1"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
 
     <Button
         android:id="@+id/btn_CircleIndicator"
@@ -37,26 +57,32 @@
         android:id="@+id/btn_JSBridge"
         style="@style/btn_style"
         android:text="JSBridge" />
+
     <Button
         android:id="@+id/btn_AndroidJS"
         style="@style/btn_style"
         android:text="Android和JS交互" />
+
     <Button
         android:id="@+id/btn_IndexableListView"
         style="@style/btn_style"
         android:text="IndexableListView" />
+
     <Button
         android:id="@+id/btn_AndroidCheckBox"
         style="@style/btn_style"
         android:text="AndroidCheckBox" />
+
     <Button
         android:id="@+id/btn_DateWheelActivity"
         style="@style/btn_style"
         android:text="DateWheelActivity" />
+
     <Button
         android:id="@+id/btn_SmsValidateCode"
         style="@style/btn_style"
         android:text="SmsValidateCode" />
+
     <Button
         android:id="@+id/btn_PickerView"
         style="@style/btn_style"
