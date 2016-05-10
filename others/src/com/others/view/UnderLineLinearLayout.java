@@ -12,17 +12,17 @@ import android.widget.LinearLayout;
 import com.others.R;
 
 /**
- * Created by 大灯泡 on 2016/1/21.
- * 简易带有时间轴的linearlayout
+ * Created by ????? on 2016/1/21.
+ * ?????????????linearlayout
  */
 public class UnderLineLinearLayout extends LinearLayout {
-    //=============================================================line gravity常量定义
+    //=============================================================line gravity????????
     public static final int GRAVITY_LEFT = 2;
     public static final int GRAVITY_RIGHT = 4;
     public static final int GRAVITY_MIDDLE =0;
     public static final int GRAVITY_TOP = 1;
     public static final int GRAVITY_BOTTOM = 3;
-    //=============================================================元素定义
+    //=============================================================??????
     private Bitmap mIcon;
     //line location
     private int lineMarginSide;
@@ -37,22 +37,22 @@ public class UnderLineLinearLayout extends LinearLayout {
     //=============================================================paint
     private Paint linePaint;
     private Paint pointPaint;
-    //=============================================================其他辅助参数
-    //第一个点的位置
+    //=============================================================?????????
+    //????????λ??
     private int firstX;
     private int firstY;
-    //最后一个图的位置
+    //?????????λ??
     private int lastX;
     private int lastY;
-    //默认垂直
+    //?????
     private int curOrientation = VERTICAL;
 
-    //line gravity(默认垂直的左边)
+    //line gravity(??????????)
     private int lineGravity = GRAVITY_LEFT;
 
     private Context mContext;
 
-    //开关
+    //????
     private boolean drawLine = true;
 
     private int rootLeft;
@@ -60,7 +60,7 @@ public class UnderLineLinearLayout extends LinearLayout {
     private int rootRight;
     private int rootTop;
     private int rootBottom;
-    //参照点
+    //?????
     private int sideRelative;
 
     public UnderLineLinearLayout(Context context) {
@@ -156,7 +156,7 @@ public class UnderLineLinearLayout extends LinearLayout {
         int childCount = getChildCount();
 
         if (childCount > 0) {
-            //大于1，证明至少有2个，也就是第一个和第二个之间连成线，第一个和最后一个分别有点/icon
+            //????1???????????2??????????????????????????????????????????????е?/icon
             if (childCount > 1) {
                 switch (curOrientation) {
                     case VERTICAL:
@@ -191,10 +191,10 @@ public class UnderLineLinearLayout extends LinearLayout {
     private void drawFirstChildViewVertical(Canvas canvas) {
         if (getChildAt(0) != null) {
             int top = getChildAt(0).getTop();
-            //记录值
+            //????
             firstX = sideRelative>=rootMiddle?(sideRelative-lineMarginSide):(sideRelative+lineMarginSide);
             firstY = top + getChildAt(0).getPaddingTop() + lineDynamicDimen;
-            //画一个圆
+            //??????
             canvas.drawCircle(firstX, firstY, pointSize, pointPaint);
         }
     }
@@ -202,23 +202,23 @@ public class UnderLineLinearLayout extends LinearLayout {
     private void drawLastChildViewVertical(Canvas canvas) {
         if (getChildAt(getChildCount() - 1) != null) {
             int top = getChildAt(getChildCount() - 1).getTop();
-            //记录值
+            //????
             lastX = (sideRelative>=rootMiddle?(sideRelative-lineMarginSide):(sideRelative+lineMarginSide)) - (mIcon
                     .getWidth() >> 1);
             lastY = top + getChildAt(getChildCount() - 1).getPaddingTop() + lineDynamicDimen;
-            //画一个图
+            //??????
             canvas.drawBitmap(mIcon, lastX, lastY, null);
         }
     }
 
     private void drawBetweenLineVertical(Canvas canvas) {
-        //画剩下的
+        //??????
         canvas.drawLine(firstX, firstY, firstX, lastY, linePaint);
         for (int i = 0; i < getChildCount() - 1; i++) {
-            //画了线，就画圆
+            //???????????
             if (getChildAt(i) != null && i != 0) {
                 int top = getChildAt(i).getTop();
-                //记录值
+                //????
                 int Y = top + getChildAt(i).getPaddingTop() + lineDynamicDimen;
                 canvas.drawCircle(firstX, Y, pointSize, pointPaint);
             }
@@ -229,10 +229,10 @@ public class UnderLineLinearLayout extends LinearLayout {
     private void drawFirstChildViewHorizontal(Canvas canvas) {
         if (getChildAt(0) != null) {
             int left = getChildAt(0).getLeft();
-            //记录值
+            //????
             firstX = left + getChildAt(0).getPaddingLeft() + lineDynamicDimen;
             firstY = sideRelative>=rootMiddle?(sideRelative-lineMarginSide):(sideRelative+lineMarginSide);
-            //画一个圆
+            //??????
             canvas.drawCircle(firstX, firstY, pointSize, pointPaint);
         }
     }
@@ -240,23 +240,23 @@ public class UnderLineLinearLayout extends LinearLayout {
     private void drawLastChildViewHorizontal(Canvas canvas) {
         if (getChildAt(getChildCount() - 1) != null) {
             int left = getChildAt(getChildCount() - 1).getLeft();
-            //记录值
+            //????
             lastX = left + getChildAt(getChildCount() - 1).getPaddingLeft() + lineDynamicDimen;
             lastY = (sideRelative>=rootMiddle?(sideRelative-lineMarginSide):(sideRelative+lineMarginSide)) - (mIcon
                     .getWidth() >> 1);
-            //画一个图
+            //??????
             canvas.drawBitmap(mIcon, lastX, lastY, null);
         }
     }
 
     private void drawBetweenLineHorizontal(Canvas canvas) {
-        //画剩下的线
+        //????????
         canvas.drawLine(firstX, firstY, lastX, firstY, linePaint);
         for (int i = 0; i < getChildCount() - 1; i++) {
-            //画了线，就画圆
+            //???????????
             if (getChildAt(i) != null && i != 0) {
                 int left = getChildAt(i).getLeft();
-                //记录值
+                //????
                 int x = left + getChildAt(i).getPaddingLeft() + lineDynamicDimen;
                 canvas.drawCircle(x, firstY, pointSize, pointPaint);
             }

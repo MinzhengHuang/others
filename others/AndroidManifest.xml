@@ -45,6 +45,7 @@
         <activity android:name=".activity.UnderLineActivity"></activity>
         <activity android:name=".activity.HorizontalActivity"></activity>
         <activity android:name=".activity.PasswordEditTextActivity" ></activity>
+        <activity android:name=".activity.StepsViewActivity" ></activity>
     </application>
 
 </manifest>
