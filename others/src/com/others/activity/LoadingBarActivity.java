@@ -6,6 +6,7 @@ import android.os.Handler;
 import android.view.View;
 
 import com.others.R;
+import com.others.view.ConfirmView;
 import com.others.view.DownLoadBar;
 import com.others.view.LoadingBar;
 
@@ -19,6 +20,7 @@ public class LoadingBarActivity extends Activity {
     int current = 0;
     private LoadingBar lb;
     private LoadingBar lbFailed;
+    private ConfirmView confirmView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +29,7 @@ public class LoadingBarActivity extends Activity {
 
         lb = (LoadingBar) findViewById(R.id.lb_loading);
         lbFailed = (LoadingBar) findViewById(R.id.lb_loadingfailed);
+        confirmView = (ConfirmView) findViewById(R.id.confirm_view);
         findViewById(R.id.failed).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -68,7 +71,7 @@ public class LoadingBarActivity extends Activity {
         public void run() {
             if (current < 100) {
                 current += new Random().nextInt(5);
-            }else {
+            } else {
                 handler.removeCallbacks(runnable);
             }
             dlb.setmCurrentProgress(current);
@@ -76,4 +79,17 @@ public class LoadingBarActivity extends Activity {
             handler.postDelayed(runnable, 100);
         }
     };
+
+
+    public void progressing(View view) {
+        confirmView.animatedWithState(ConfirmView.State.Progressing);
+    }
+
+    public void fail(View view) {
+        confirmView.animatedWithState(ConfirmView.State.Fail);
+    }
+
+    public void success(View view) {
+        confirmView.animatedWithState(ConfirmView.State.Success);
+    }
 }

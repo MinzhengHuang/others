@@ -9,47 +9,141 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity">
 
-
-    <Button
-        android:id="@+id/success"
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:text="Success" />
+        android:padding="10dp"
+        android:text="方式一"
+        android:textColor="#333" />
 
-    <com.others.view.LoadingBar
-        android:id="@+id/lb_loading"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_gravity="center">
-
-    </com.others.view.LoadingBar>
-
-    <Button
-        android:id="@+id/failed"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Failed" />
+        android:orientation="horizontal">
 
-    <com.others.view.LoadingBar
-        android:id="@+id/lb_loadingfailed"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_gravity="center">
+        <Button
+            android:id="@+id/success"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Success" />
 
-    </com.others.view.LoadingBar>
+        <Button
+            android:id="@+id/failed"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Failed" />
 
-    <Button
-        android:id="@+id/start_success"
+        <Button
+            android:id="@+id/start_success"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Start" />
+    </LinearLayout>
+
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Start" />
+        android:orientation="horizontal">
 
-    <com.others.view.DownLoadBar
-        android:id="@+id/dlb"
-        android:layout_width="60dp"
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <com.others.view.LoadingBar
+                android:id="@+id/lb_loading"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center">
+
+            </com.others.view.LoadingBar>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <com.others.view.LoadingBar
+                android:id="@+id/lb_loadingfailed"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center">
+
+            </com.others.view.LoadingBar>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <com.others.view.DownLoadBar
+                android:id="@+id/dlb"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center">
+
+            </com.others.view.DownLoadBar>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:padding="10dp"
+        android:text="方式二"
+        android:textColor="#333" />
+
+    <LinearLayout
+        android:id="@+id/ll_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="progressing"
+                android:text="progressing" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="fail"
+                android:text="fail" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="success"
+                android:text="success" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.others.view.ConfirmView
+        android:id="@+id/confirm_view"
+        android:layout_width="100dip"
+        android:layout_height="100dip"
         android:layout_gravity="center"
-        android:layout_height="60dp">
-
-    </com.others.view.DownLoadBar>
+        android:layout_marginTop="20dp" />
 </LinearLayout>
