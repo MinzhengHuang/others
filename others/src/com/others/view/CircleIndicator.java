@@ -76,8 +76,9 @@ public class CircleIndicator extends View {
     }
 
     private void handleTypedArray(Context context, AttributeSet attrs) {
-        if(attrs == null)
+        if(attrs == null){
             return;
+        }
         TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.CircleIndicator);
         mIndicatorRadius = typedArray.getDimensionPixelSize(R.styleable.CircleIndicator_ci_radius, DEFAULT_INDICATOR_RADIUS);
         mIndicatorMargin = typedArray.getDimensionPixelSize(R.styleable.CircleIndicator_ci_margin, DEFAULT_INDICATOR_MARGIN);
@@ -190,8 +191,9 @@ public class CircleIndicator extends View {
 
     }
     private float startDrawPosition(final int containerWidth){
-        if(mIndicatorLayoutGravity == Gravity.LEFT)
+        if(mIndicatorLayoutGravity == Gravity.LEFT){
             return 0;
+        }
         float tabItemsLength = tabItems.size()*(2* mIndicatorRadius + mIndicatorMargin)- mIndicatorMargin;
         if(containerWidth<tabItemsLength){
             return 0;

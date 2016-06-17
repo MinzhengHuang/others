@@ -17,5 +17,4 @@
         android:textColor="@drawable/filter_line_pw_txt_color"
         android:textSize="14sp" />
 
-
 </FrameLayout>

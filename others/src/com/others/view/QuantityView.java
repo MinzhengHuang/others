@@ -29,8 +29,8 @@ public class QuantityView extends LinearLayout implements View.OnClickListener {
     private int quantity, maxQuantity, minQuantity;
     private int quantityPadding;
     private int quantityTextColor, addButtonTextColor, removeButtonTextColor;
-    private Button mButtonAdd, mButtonRemove;
-    private TextView mTextViewQuantity;
+    private Button mbtnAdd, mbtnRemove;
+    private TextView mtvQuantity;
 
     public interface OnQuantityChangeListener {
         void onQuantityChanged(int newQuantity, boolean programmatically);
@@ -94,30 +94,30 @@ public class QuantityView extends LinearLayout implements View.OnClickListener {
         a.recycle();
         int dp10 = pxFromDp(10);
 
-        mButtonAdd = new Button(getContext());
-        mButtonAdd.setGravity(Gravity.CENTER);
-        mButtonAdd.setPadding(dp10, dp10, dp10, dp10);
-        mButtonAdd.setMinimumHeight(0);
-        mButtonAdd.setMinimumWidth(0);
-        mButtonAdd.setMinHeight(0);
-        mButtonAdd.setMinWidth(0);
+        mbtnAdd = new Button(getContext());
+        mbtnAdd.setGravity(Gravity.CENTER);
+        mbtnAdd.setPadding(dp10, dp10, dp10, dp10);
+        mbtnAdd.setMinimumHeight(0);
+        mbtnAdd.setMinimumWidth(0);
+        mbtnAdd.setMinHeight(0);
+        mbtnAdd.setMinWidth(0);
         setAddButtonBackground(addButtonBackground);
         setAddButtonText(addButtonText);
         setAddButtonTextColor(addButtonTextColor);
 
-        mButtonRemove = new Button(getContext());
-        mButtonRemove.setGravity(Gravity.CENTER);
-        mButtonRemove.setPadding(dp10, dp10, dp10, dp10);
-        mButtonRemove.setMinimumHeight(0);
-        mButtonRemove.setMinimumWidth(0);
-        mButtonRemove.setMinHeight(0);
-        mButtonRemove.setMinWidth(0);
+        mbtnRemove = new Button(getContext());
+        mbtnRemove.setGravity(Gravity.CENTER);
+        mbtnRemove.setPadding(dp10, dp10, dp10, dp10);
+        mbtnRemove.setMinimumHeight(0);
+        mbtnRemove.setMinimumWidth(0);
+        mbtnRemove.setMinHeight(0);
+        mbtnRemove.setMinWidth(0);
         setRemoveButtonBackground(removeButtonBackground);
         setRemoveButtonText(removeButtonText);
         setRemoveButtonTextColor(removeButtonTextColor);
 
-        mTextViewQuantity = new TextView(getContext());
-        mTextViewQuantity.setGravity(Gravity.CENTER);
+        mtvQuantity = new TextView(getContext());
+        mtvQuantity.setGravity(Gravity.CENTER);
         setQuantityTextColor(quantityTextColor);
         setQuantity(quantity);
         setQuantityBackground(quantityBackground);
@@ -125,13 +125,13 @@ public class QuantityView extends LinearLayout implements View.OnClickListener {
 
         setOrientation(HORIZONTAL);
 
-        addView(mButtonRemove, LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
-        addView(mTextViewQuantity, LayoutParams.WRAP_CONTENT, LayoutParams.MATCH_PARENT);
-        addView(mButtonAdd, LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
+        addView(mbtnRemove, LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
+        addView(mtvQuantity, LayoutParams.WRAP_CONTENT, LayoutParams.MATCH_PARENT);
+        addView(mbtnAdd, LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
 
-        mButtonAdd.setOnClickListener(this);
-        mButtonRemove.setOnClickListener(this);
-        mTextViewQuantity.setOnClickListener(this);
+        mbtnAdd.setOnClickListener(this);
+        mbtnRemove.setOnClickListener(this);
+        mtvQuantity.setOnClickListener(this);
     }
 
 
@@ -141,25 +141,25 @@ public class QuantityView extends LinearLayout implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
-        if (v == mButtonAdd) {
+        if (v == mbtnAdd) {
             if (quantity + 1 > maxQuantity) {
                 if (onQuantityChangeListener != null) onQuantityChangeListener.onLimitReached();
             } else {
                 quantity += 1;
-                mTextViewQuantity.setText(String.valueOf(quantity));
+                mtvQuantity.setText(String.valueOf(quantity));
                 if (onQuantityChangeListener != null)
                     onQuantityChangeListener.onQuantityChanged(quantity, false);
             }
-        } else if (v == mButtonRemove) {
+        } else if (v == mbtnRemove) {
             if (quantity - 1 < minQuantity) {
                 if (onQuantityChangeListener != null) onQuantityChangeListener.onLimitReached();
             } else {
                 quantity -= 1;
-                mTextViewQuantity.setText(String.valueOf(quantity));
+                mtvQuantity.setText(String.valueOf(quantity));
                 if (onQuantityChangeListener != null)
                     onQuantityChangeListener.onQuantityChanged(quantity, false);
             }
-        } else if (v == mTextViewQuantity) {
+        } else if (v == mtvQuantity) {
             if (mTextViewClickListener != null) {
                 mTextViewClickListener.onClick(v);
                 return;
@@ -202,9 +202,9 @@ public class QuantityView extends LinearLayout implements View.OnClickListener {
     public void setQuantityBackground(Drawable quantityBackground) {
         this.quantityBackground = quantityBackground;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
-            mTextViewQuantity.setBackground(quantityBackground);
+            mtvQuantity.setBackground(quantityBackground);
         } else {
-            mTextViewQuantity.setBackgroundDrawable(quantityBackground);
+            mtvQuantity.setBackgroundDrawable(quantityBackground);
         }
     }
 
@@ -215,9 +215,9 @@ public class QuantityView extends LinearLayout implements View.OnClickListener {
     public void setAddButtonBackground(Drawable addButtonBackground) {
         this.addButtonBackground = addButtonBackground;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
-            mButtonAdd.setBackground(addButtonBackground);
+            mbtnAdd.setBackground(addButtonBackground);
         } else {
-            mButtonAdd.setBackgroundDrawable(addButtonBackground);
+            mbtnAdd.setBackgroundDrawable(addButtonBackground);
         }
     }
 
@@ -228,9 +228,9 @@ public class QuantityView extends LinearLayout implements View.OnClickListener {
     public void setRemoveButtonBackground(Drawable removeButtonBackground) {
         this.removeButtonBackground = removeButtonBackground;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
-            mButtonRemove.setBackground(removeButtonBackground);
+            mbtnRemove.setBackground(removeButtonBackground);
         } else {
-            mButtonRemove.setBackgroundDrawable(removeButtonBackground);
+            mbtnRemove.setBackgroundDrawable(removeButtonBackground);
         }
     }
 
@@ -240,7 +240,7 @@ public class QuantityView extends LinearLayout implements View.OnClickListener {
 
     public void setAddButtonText(String addButtonText) {
         this.addButtonText = addButtonText;
-        mButtonAdd.setText(addButtonText);
+        mbtnAdd.setText(addButtonText);
     }
 
     public String getRemoveButtonText() {
@@ -249,7 +249,7 @@ public class QuantityView extends LinearLayout implements View.OnClickListener {
 
     public void setRemoveButtonText(String removeButtonText) {
         this.removeButtonText = removeButtonText;
-        mButtonRemove.setText(removeButtonText);
+        mbtnRemove.setText(removeButtonText);
     }
 
     public int getQuantity() {
@@ -275,7 +275,7 @@ public class QuantityView extends LinearLayout implements View.OnClickListener {
             onQuantityChangeListener.onQuantityChanged(quantity, true);
 
         this.quantity = quantity;
-        mTextViewQuantity.setText(String.valueOf(this.quantity));
+        mtvQuantity.setText(String.valueOf(this.quantity));
     }
 
     public int getMaxQuantity() {
@@ -300,7 +300,7 @@ public class QuantityView extends LinearLayout implements View.OnClickListener {
 
     public void setQuantityPadding(int quantityPadding) {
         this.quantityPadding = quantityPadding;
-        mTextViewQuantity.setPadding(quantityPadding, 0, quantityPadding, 0);
+        mtvQuantity.setPadding(quantityPadding, 0, quantityPadding, 0);
     }
 
     public int getQuantityTextColor() {
@@ -309,12 +309,12 @@ public class QuantityView extends LinearLayout implements View.OnClickListener {
 
     public void setQuantityTextColor(int quantityTextColor) {
         this.quantityTextColor = quantityTextColor;
-        mTextViewQuantity.setTextColor(quantityTextColor);
+        mtvQuantity.setTextColor(quantityTextColor);
     }
 
     public void setQuantityTextColorRes(int quantityTextColorRes) {
         this.quantityTextColor = getResources().getColor(quantityTextColorRes);
-        mTextViewQuantity.setTextColor(quantityTextColor);
+        mtvQuantity.setTextColor(quantityTextColor);
     }
 
     public int getAddButtonTextColor() {
@@ -323,12 +323,12 @@ public class QuantityView extends LinearLayout implements View.OnClickListener {
 
     public void setAddButtonTextColor(int addButtonTextColor) {
         this.addButtonTextColor = addButtonTextColor;
-        mButtonAdd.setTextColor(addButtonTextColor);
+        mbtnAdd.setTextColor(addButtonTextColor);
     }
 
     public void setAddButtonTextColorRes(int addButtonTextColorRes) {
         this.addButtonTextColor = getResources().getColor(addButtonTextColorRes);
-        mButtonAdd.setTextColor(addButtonTextColor);
+        mbtnAdd.setTextColor(addButtonTextColor);
     }
 
     public int getRemoveButtonTextColor() {
@@ -337,12 +337,12 @@ public class QuantityView extends LinearLayout implements View.OnClickListener {
 
     public void setRemoveButtonTextColor(int removeButtonTextColor) {
         this.removeButtonTextColor = removeButtonTextColor;
-        mButtonRemove.setTextColor(removeButtonTextColor);
+        mbtnRemove.setTextColor(removeButtonTextColor);
     }
 
     public void setRemoveButtonTextColorRes(int removeButtonTextColorRes) {
         this.removeButtonTextColor = getResources().getColor(removeButtonTextColorRes);
-        mButtonRemove.setTextColor(removeButtonTextColor);
+        mbtnRemove.setTextColor(removeButtonTextColor);
     }
 
     private int dpFromPx(final float px) {
@@ -352,7 +352,6 @@ public class QuantityView extends LinearLayout implements View.OnClickListener {
     private int pxFromDp(final float dp) {
         return (int) (dp * getResources().getDisplayMetrics().density);
     }
-
 
     private boolean isNumber(String string) {
         try {

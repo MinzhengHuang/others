@@ -24,7 +24,6 @@ import java.util.Calendar;
  */
 @SuppressLint("ViewConstructor")
 public class DatePopupWindow extends PopupWindow {
-
     private View mMenuView;
     private WheelView yearView, monthView, dayView;
     private NumericWheelAdapter yearAdapter, monthAdapter, dayAdapter;
@@ -42,29 +41,19 @@ public class DatePopupWindow extends PopupWindow {
         yearView = (WheelView) mMenuView.findViewById(R.id.year_view);
         monthView = (WheelView) mMenuView.findViewById(R.id.month_view);
         dayView = (WheelView) mMenuView.findViewById(R.id.day_view);
-        TextView tvTitle = (TextView) mMenuView
-                .findViewById(R.id.title_textview);
+        TextView tvTitle = (TextView) mMenuView.findViewById(R.id.title_textview);
         tvTitle.setText(title);
 
         initListener();
         initView();
 
-        // ���ð�ť����
-        // ����SelectPicPopupWindow��View
         this.setContentView(mMenuView);
-        // ����SelectPicPopupWindow��������Ŀ�
         this.setWidth(LayoutParams.MATCH_PARENT);
-        // ����SelectPicPopupWindow��������ĸ�
         this.setHeight(LayoutParams.WRAP_CONTENT);
-        // ����SelectPicPopupWindow��������ɵ��
         this.setFocusable(true);
-        // ����SelectPicPopupWindow�������嶯��Ч��
         this.setAnimationStyle(R.style.AnimBottom);
-        // ʵ��һ��ColorDrawable��ɫΪ��͸��
         ColorDrawable dw = new ColorDrawable(Color.TRANSPARENT);
-        // ����SelectPicPopupWindow��������ı���
         this.setBackgroundDrawable(dw);
-        // mMenuView���OnTouchListener�����жϻ�ȡ����λ�������ѡ�����������ٵ�����
         mMenuView.setOnTouchListener(new OnTouchListener() {
 
             public boolean onTouch(View v, MotionEvent event) {

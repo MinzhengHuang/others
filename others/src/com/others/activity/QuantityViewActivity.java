@@ -45,16 +45,17 @@ public class QuantityViewActivity extends Activity implements QuantityView.OnQua
                 tvPrice.setText("$ " + pricePerProduct);
                 tvTotal.setText("$ " + quantityViewDefault.getQuantity() * pricePerProduct);
 
-
                 et.addTextChangedListener(new TextWatcher() {
                     @Override
                     public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
                     }
 
                     @Override
                     public void onTextChanged(CharSequence s, int start, int before, int count) {
-                        if (TextUtils.isEmpty(s)) return;
-
+                        if (TextUtils.isEmpty(s)) {
+                            return;
+                        }
                         int intNewQuantity = Integer.parseInt(s.toString());
                         tvTotal.setText("$ " + intNewQuantity * pricePerProduct);
                     }
@@ -70,8 +71,9 @@ public class QuantityViewActivity extends Activity implements QuantityView.OnQua
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         String newQuantity = et.getText().toString();
-                        if (TextUtils.isEmpty(newQuantity)) return;
-
+                        if (TextUtils.isEmpty(newQuantity)) {
+                            return;
+                        }
                         int intNewQuantity = Integer.parseInt(newQuantity);
 
                         quantityViewDefault.setQuantity(intNewQuantity);

@@ -15,10 +15,10 @@ import java.util.List;
 import java.util.Random;
 
 public class CircleIndicatorActivity extends Activity {
-
     private List<View> viewList;
     private ViewPager viewPager;
     private CircleIndicator circleIndicator;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
