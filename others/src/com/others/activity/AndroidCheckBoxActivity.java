@@ -12,7 +12,7 @@ import com.others.view.FilterLinePw;
 
 public class AndroidCheckBoxActivity extends Activity {
 
-    private String[] wfilter_type_strs = {"音乐", "书籍", "电影"};
+    private String[] filter_type_strs = {"音乐", "书籍", "电影"};
     private CheckBox cbx;
     private boolean lockState = false;
     private int current_filter_type = 0;

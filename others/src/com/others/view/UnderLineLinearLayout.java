@@ -12,8 +12,6 @@ import android.widget.LinearLayout;
 import com.others.R;
 
 /**
- * Created by ????? on 2016/1/21.
- * ?????????????linearlayout
  */
 public class UnderLineLinearLayout extends LinearLayout {
     //=============================================================line gravity????????
@@ -38,21 +36,17 @@ public class UnderLineLinearLayout extends LinearLayout {
     private Paint linePaint;
     private Paint pointPaint;
     //=============================================================?????????
-    //????????¦Ë??
     private int firstX;
     private int firstY;
-    //?????????¦Ë??
     private int lastX;
     private int lastY;
     //?????
     private int curOrientation = VERTICAL;
 
-    //line gravity(??????????)
     private int lineGravity = GRAVITY_LEFT;
 
     private Context mContext;
 
-    //????
     private boolean drawLine = true;
 
     private int rootLeft;
@@ -60,7 +54,6 @@ public class UnderLineLinearLayout extends LinearLayout {
     private int rootRight;
     private int rootTop;
     private int rootBottom;
-    //?????
     private int sideRelative;
 
     public UnderLineLinearLayout(Context context) {
@@ -156,7 +149,6 @@ public class UnderLineLinearLayout extends LinearLayout {
         int childCount = getChildCount();
 
         if (childCount > 0) {
-            //????1???????????2??????????????????????????????????????????????§Ö?/icon
             if (childCount > 1) {
                 switch (curOrientation) {
                     case VERTICAL:
@@ -244,19 +236,15 @@ public class UnderLineLinearLayout extends LinearLayout {
             lastX = left + getChildAt(getChildCount() - 1).getPaddingLeft() + lineDynamicDimen;
             lastY = (sideRelative>=rootMiddle?(sideRelative-lineMarginSide):(sideRelative+lineMarginSide)) - (mIcon
                     .getWidth() >> 1);
-            //??????
             canvas.drawBitmap(mIcon, lastX, lastY, null);
         }
     }
 
     private void drawBetweenLineHorizontal(Canvas canvas) {
-        //????????
         canvas.drawLine(firstX, firstY, lastX, firstY, linePaint);
         for (int i = 0; i < getChildCount() - 1; i++) {
-            //???????????
             if (getChildAt(i) != null && i != 0) {
                 int left = getChildAt(i).getLeft();
-                //????
                 int x = left + getChildAt(i).getPaddingLeft() + lineDynamicDimen;
                 canvas.drawCircle(x, firstY, pointSize, pointPaint);
             }
