@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewConfiguration;
 import android.view.Window;
+import android.widget.Toast;
 
 import com.others.R;
 import com.others.fragment.FirstFragment;
@@ -47,17 +48,15 @@ public class OthersMainActivity extends FragmentActivity implements OnClickListe
 		initDatas();
 		mViewPager.setAdapter(mAdapter);
 		initEvent();
+		Toast.makeText(OthersMainActivity.this, "hmzhhh", Toast.LENGTH_SHORT).show();
 //		this.getWindow().setFlags(FLAG_HOMEKEY_DISPATCHED, FLAG_HOMEKEY_DISPATCHED);//关键代码
-
 	}
 
 	/**
 	 * 初始化所有事件
 	 */
 	private void initEvent() {
-
 		mViewPager.setOnPageChangeListener(this);
-
 	}
 
 	private void initDatas() {
@@ -221,4 +220,8 @@ public class OthersMainActivity extends FragmentActivity implements OnClickListe
 		return super.onKeyDown(keyCode, event);
 	}
 
+	@Override
+	protected void onResume() {
+		super.onResume();
+	}
 }
